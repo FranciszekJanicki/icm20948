@@ -5,10 +5,8 @@ target_sources(icm20948 PRIVATE
     "icm20948_dmp.c"
 )
 
-target_include_directories(icm20948 PUBLIC 
-)
-
-target_link_libraries(icm20948 PRIVATE
+target_include_directories(icm20948 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(icm20948 PUBLIC
