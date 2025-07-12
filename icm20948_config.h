@@ -31,9 +31,9 @@ typedef enum {
 } icm20948_err_t;
 
 typedef enum {
-    ICM20948_DEV_ADDRESS_AD0_LOW = 0b1101000,
-    ICM20948_DEV_ADDRESS_AD0_HIGH = 0b1101001,
-} icm20948_dev_address_t;
+    ICM20948_SLAVE_ADDRESS_AD0_LOW = 0b1101000,
+    ICM20948_SLAVE_ADDRESS_AD0_HIGH = 0b1101001,
+} icm20948_slave_address_t;
 
 typedef enum {
     ICM20948_REG_ADDRESS_WHO_AM_I = 0x00,
