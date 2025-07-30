@@ -4,6 +4,10 @@
 #include "icm20948_config.h"
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     int16_t w;
     int16_t x;
@@ -24,5 +28,9 @@ typedef struct {
 #define ICM20948_FIFO_DEFAULT_TIMEOUT 11000
 #define ICM20948_FIFO_MAX_COUNT 1024UL
 #define ICM20948_DMP_SCALE (2.0F / (float32_t)(1 << 31))
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ICM20948_ICM20948_DMP_CONFIG_H

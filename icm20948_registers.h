@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     uint8_t user_bank : 2;
 } icm20948_bank_sel_reg_t;
@@ -365,5 +369,9 @@ typedef struct {
 typedef struct {
     uint8_t i2c_slv4_di : 8;
 } icm20948_i2c_slv4_di_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ICM20948_ICM20948_REGISTERS_H

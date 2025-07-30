@@ -6,6 +6,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define ICM20948_REG_ADDRESS_BANK_SEL 0x7F
 #define ICM20948_DEVICE_ID 0xEA
 #define ICM20948_TEMP_SCALE 0
@@ -305,5 +309,9 @@ typedef struct {
     icm20948_err_t (*bus_write_data)(void*, uint8_t, uint8_t const*, size_t);
     icm20948_err_t (*bus_read_data)(void*, uint8_t, uint8_t*, size_t);
 } icm20948_interface_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ICM20948_ICM20948_CONFIG_H

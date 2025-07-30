@@ -4,6 +4,10 @@
 #include "icm20948_config.h"
 #include "icm20948_registers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     icm20948_config_t config;
     icm20948_interface_t interface;
@@ -466,5 +470,9 @@ icm20948_err_t icm20948_set_i2c_slv4_do_reg(
 
 icm20948_err_t icm20948_get_i2c_slv4_di_reg(icm20948_t const* icm20948,
                                             icm20948_i2c_slv4_di_reg_t* reg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ICM20948_ICM20948_H
